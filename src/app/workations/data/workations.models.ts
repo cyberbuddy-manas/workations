@@ -5,8 +5,8 @@ export interface WorkationRow {
   employee: string;
   origin: string;
   destination: string;
-  start: string;
-  end: string;
+  startD: string;
+  endD: string;
   workingDays: number;
   risk: Risk;
 }

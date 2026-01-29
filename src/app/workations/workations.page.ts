@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkationsTableComponent } from './components/workations-table/workations-table.component';
-import { WorkationsService } from './data/workations.service';
+import { WorkationsService } from './services/workations.service';
 
 @Component({
   standalone: true,
@@ -12,5 +12,6 @@ import { WorkationsService } from './data/workations.service';
   providers: [WorkationsService],
 })
 export class WorkationsPage {
-  constructor(public readonly svc: WorkationsService) {}
+  private readonly svc = inject(WorkationsService);
+  workations$ = this.svc.getRows();
 }

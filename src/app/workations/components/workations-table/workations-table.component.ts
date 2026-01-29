@@ -7,7 +7,7 @@ import { WorkationRow } from '../../data/workations.models';
 import { flagFor, riskLabel } from '../../data/workations.utils';
 import { SortState, toggleSort } from '../helpers/workations-table';
 
-type ColKey = 'employee' | 'origin' | 'destination' | 'start' | 'end' | 'workingDays' | 'risk';
+type ColKey = 'employee' | 'origin' | 'destination' | 'startD' | 'endD' | 'workingDays' | 'risk';
 
 @Component({
   standalone: true,
@@ -35,8 +35,8 @@ export class WorkationsTableComponent {
       switch (s.key) {
         case 'workingDays':
           return (a.workingDays - b.workingDays) * dir;
-        case 'start':
-        case 'end':
+        case 'startD':
+        case 'endD':
           return a[s.key].localeCompare(b[s.key]) * dir; // ISO date sorts correctly
         case 'risk': {
           const rank = (r: WorkationRow['risk']) => (r === 'HIGH' ? 3 : r === 'LOW' ? 2 : 1);

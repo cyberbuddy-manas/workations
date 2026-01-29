@@ -1,2 +1,6 @@
 <h1>Workations</h1>
-<app-workations-table [rows]="svc.getRows()"></app-workations-table>
+@let rows = workations$ | async;
+@if (rows) {
+<app-workations-table [rows]="rows">
+</app-workations-table>
+}

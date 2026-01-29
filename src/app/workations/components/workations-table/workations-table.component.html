@@ -31,22 +31,22 @@
         </span>
       </th>
 
-      <th (click)="onHeaderClick('start')" class="click">
+      <th (click)="onHeaderClick('startD')" class="click">
         <span class="th"
           >Start
-          <span class="sort" [class.on]="isAsc('start') || isDesc('start')">
-            <span class="up" [class.active]="isAsc('start')">▲</span>
-            <span class="down" [class.active]="isDesc('start')">▼</span>
+          <span class="sort" [class.on]="isAsc('startD') || isDesc('startD')">
+            <span class="up" [class.active]="isAsc('startD')">▲</span>
+            <span class="down" [class.active]="isDesc('startD')">▼</span>
           </span>
         </span>
       </th>
 
-      <th (click)="onHeaderClick('end')" class="click">
+      <th (click)="onHeaderClick('endD')" class="click">
         <span class="th"
           >End
-          <span class="sort" [class.on]="isAsc('end') || isDesc('end')">
-            <span class="up" [class.active]="isAsc('end')">▲</span>
-            <span class="down" [class.active]="isDesc('end')">▼</span>
+          <span class="sort" [class.on]="isAsc('endD') || isDesc('endD')">
+            <span class="up" [class.active]="isAsc('endD')">▲</span>
+            <span class="down" [class.active]="isDesc('endD')">▼</span>
           </span>
         </span>
       </th>
@@ -88,8 +88,8 @@
           >{{ r.destination }}</span
         >
       </td>
-      <td class="date">{{ r.start | dateFormat }}</td>
-      <td class="date">{{ r.end | dateFormat }}</td>
+      <td class="date">{{ r.startD | dateFormat }}</td>
+      <td class="date">{{ r.endD | dateFormat }}</td>
       <td class="num">{{ r.workingDays }}</td>
       <td><app-badge [value]="riskLabel(r.risk)" [risk]="r.risk"></app-badge></td>
     </tr>
