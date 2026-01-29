@@ -1,0 +1,95 @@
+.wf-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial;
+}
+
+.wf-table thead th {
+  background: #f3f5f9;
+  color: #2a2f3a;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e6e9f0;
+}
+
+.wf-table tbody td {
+  padding: 16px;
+  border-bottom: 1px solid #edf0f6;
+  font-size: 22px; /* screenshot uses larger body text */
+  color: #0b1220;
+  vertical-align: middle;
+}
+
+.wf-table tbody tr:hover {
+  background: #eaf6f6;
+}
+
+.th {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  color: #2f63b7;
+  opacity: 0.9;
+}
+
+.country {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  font-size: 22px;
+}
+
+.employee {
+  width: 22%;
+}
+.date {
+  width: 12%;
+}
+.num {
+  text-align: left;
+  width: 10%;
+}
+
+.click {
+  cursor: pointer;
+  user-select: none;
+}
+.click:hover {
+  filter: brightness(0.98);
+}
+
+.sort {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 10px;
+  font-size: 10px;
+  color: #2f63b7;
+  opacity: 0.65;
+}
+.sort.on {
+  opacity: 1;
+}
+.sort .active {
+  font-weight: 700;
+  opacity: 1;
+}
+.sort .up,
+.sort .down {
+  display: block;
+}

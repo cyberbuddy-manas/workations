@@ -1,0 +1,32 @@
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: #fff;
+}
+
+.shield svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.risk.high {
+  color: #d81b1b;
+  border-color: #f4b3b3;
+  background: #fff3f3;
+}
+.risk.low {
+  color: #1aa34a;
+  border-color: #bfe6cc;
+  background: #f1fbf4;
+}
+.risk.no {
+  color: #14a3a3;
+  border-color: #bde9e9;
+  background: #eefbfb;
+}
